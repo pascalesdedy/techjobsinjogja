@@ -1,0 +1,12 @@
+<div class="card hoverable">
+   <div class="card-content">
+      <span class="card-title">Latest JOBS</span>
+      <% @jobs.each do |job| %>
+      <li><%= link_to job.title,job %></li>
+      <%end%>  
+    </div>
+    <div class="card-action">
+       <a href="#">This is a link</a>
+   
+    </div>
+</div>

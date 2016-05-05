@@ -1,0 +1,27 @@
+<div class="container">
+<p id="notice"><%= notice %></p>
+
+<%= image_tag @talent.photo.url(:medium) %>
+<p>
+  <strong>Name:</strong>
+  <%= @talent.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @talent.description %>
+</p>
+
+<p>
+  <strong>Skill:</strong>
+  <%= @talent.skill %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @talent.email %>
+</p>
+
+<%= link_to 'Edit', edit_talent_path(@talent) %> |
+<%= link_to 'Back', talents_path %>
+</div>

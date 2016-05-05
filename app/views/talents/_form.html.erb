@@ -1,0 +1,17 @@
+<div class="container">
+<%= simple_form_for(@talent) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.file_field :photo, as: :file %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :skill %>
+    <%= f.input :email %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+</div>

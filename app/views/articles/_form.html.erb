@@ -1,0 +1,10 @@
+<%= simple_form_for(@article) do |f| %>
+<%= f.error_notification %>
+Post New Article
+   <%= f.input :title %>
+   <%= f.input :short_desc %>
+   <%= f.cktext_area :description %>
+   <%= f.file_field :image, as: :file %>
+   <%= f.button :submit %> 
+<% end %>      
+

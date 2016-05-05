@@ -1,0 +1,31 @@
+<div class="container">
+<p id="notice"><%= notice %></p>
+
+
+<h5 class='text-center'>Jobs Opening</h5>
+<div class="row">
+<div class="col s12 m8">
+<% @jobs.each do |job| %>
+    <div class="card z-depth-1 hoverable "  >
+        <h4 class="center-align"><%= link_to job.title,job %> at <%= job.company %></h3>
+        <div class="card-content">
+        <p><%= job.short_content %></p>
+        <p class="card-text">Salary : <%= job.salary %></p>
+        
+        <p class="card-text"><h6 class="right-align"><%= job.created_at.strftime('%a %b %d ') %></h6></p>
+   		</div>
+   		<td><%= link_to 'Show', job %></td>
+		<td><%= link_to 'Edit', edit_job_path(job) %></td>
+		<td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		<%= link_to 'New Job', new_job_path %>
+  
+    </div>
+<% end %>
+</div>
+
+
+	
+
+
+
+</div>

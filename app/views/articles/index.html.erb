@@ -1,0 +1,22 @@
+
+<div class="container">
+<p id="notice"><%= notice %></p>
+<h5 class='text-center'>Article </h5>
+
+<div class="row">
+<div class="col s12 m8">    
+<% @articles.each do |article| %>
+     <div class="card z-depth-1 hoverable ">
+   	 	<h4 class="center-align"><%= link_to article.title,article %></h4>
+     	<div class="card-content"><%= article.short_desc %></div>
+        <%= link_to 'Edit', edit_article_path(article) %>
+     	<%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %>
+     	<%= link_to 'New article', new_article_path %>
+ 	 </div>
+<% end %>
+</div>
+
+
+
+
+</div>

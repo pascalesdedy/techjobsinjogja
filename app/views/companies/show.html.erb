@@ -1,0 +1,25 @@
+<div class="container">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Logo:</strong>
+  <%= @company.logo %>
+</p>
+<%= image_tag @company.logo.url(:medium) %>
+<p>
+  <strong>Title:</strong>
+  <%= @company.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @company.description %>
+</p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @company.url %>
+</p>
+
+<%= link_to 'Edit', edit_company_path(@company) %> |
+<%= link_to 'Back', companies_path %>

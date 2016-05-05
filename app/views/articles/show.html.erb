@@ -1,0 +1,14 @@
+<div class="container">
+<p id="notice"><%= notice %></p>
+
+Article 
+<div class="card z-depth-3 "  >
+	<div class="card-image">
+  		<%= image_tag @article.image.url(:large) %>
+    	<span class="card-title"><%= @article.title %></span>
+    </div>
+    <div class="card-content"><%= @article.description.html_safe %></div>
+  	 <%= link_to 'Edit', edit_article_path(@article) %> 
+	 <%= link_to 'Back', articles_path %>
+  	</div>
+</div>
