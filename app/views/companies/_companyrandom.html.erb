@@ -1,0 +1,12 @@
+<div class="card hoverable ">
+   <div class="card-content">
+      <span class="card-title">Tech Companies</span>
+      <% @companies.each do |company| %>
+      <li><%= link_to company.title,company %> Website: <cite><%= company.url %></cite></li>
+      <%end%>  
+    </div>
+    <div class="card-action">
+       <a href="#">This is a link</a>
+  
+    </div>
+</div>

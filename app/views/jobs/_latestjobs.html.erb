@@ -2,7 +2,7 @@
    <div class="card-content">
       <span class="card-title">Latest JOBS</span>
       <% @jobs.each do |job| %>
-      <li><%= link_to job.title,job %></li>
+      <li><%= link_to job.title,job %> posted at <cite><%= job.created_at.strftime('%a %b %d ') %></cite></li>
       <%end%>  
     </div>
     <div class="card-action">

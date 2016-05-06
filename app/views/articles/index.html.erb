@@ -1,10 +1,9 @@
 
-<div class="container">
-<p id="notice"><%= notice %></p>
-<h5 class='text-center'>Article </h5>
 
+<p id="notice"><%= notice %></p>
 <div class="row">
 <div class="col s12 m8">    
+<%= render 'slider' %>
 <% @articles.each do |article| %>
      <div class="card z-depth-1 hoverable ">
    	 	<h4 class="center-align"><%= link_to article.title,article %></h4>
@@ -16,7 +15,21 @@
 <% end %>
 </div>
 
-
+<div class="col s12 m4">   
+<h5> JOBS Tips </h5>
+<% @jobtips.each do |jobtip| %>
+     <div class="card z-depth-1 hoverable ">
+     <div class="card-image">
+     	<%= image_tag jobtip.image.url(:medium) %>
+     	<span class="card-title"><%= link_to jobtip.title,jobtip %></span>
+     </div>	
+   	 	<div class="card-content">Content : sek, belum dibikin method nya</div>
+        <%= link_to 'Edit', edit_jobtip_path(jobtip) %>
+     	<%= link_to 'Destroy', jobtip, method: :delete, data: { confirm: 'Are you sure?' } %>
+     	<%= link_to 'New article', new_jobtip_path %>
+ 	 </div>
+<% end %>
+</div>
 
 
 </div>

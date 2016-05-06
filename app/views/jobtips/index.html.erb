@@ -1,0 +1,32 @@
+
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Jobtips</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @jobtips.each do |jobtip| %>
+      <tr>
+        <td><%= image_tag jobtip.image.url(:large) %></td>
+        <td><%= jobtip.title %></td>
+        <td><%= jobtip.description %></td>
+        <td><%= link_to 'Show', jobtip %></td>
+        <td><%= link_to 'Edit', edit_jobtip_path(jobtip) %></td>
+        <td><%= link_to 'Destroy', jobtip, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Jobtip', new_jobtip_path %>

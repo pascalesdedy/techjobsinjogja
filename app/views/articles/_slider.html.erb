@@ -1,0 +1,13 @@
+<div class="slider">
+    <ul class="slides">
+      <% @articles.each do |article| %>
+     <li>
+        <%= image_tag article.image.url(:large) %> <!-- random image -->
+        <div class="caption left-align">
+          <h5><%= link_to article.title,article, class: "white-text" %></h5>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <% end %>
+    </ul>
+  </div>

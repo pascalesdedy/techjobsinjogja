@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @jobtip.image.url(:large) %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @jobtip.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @jobtip.description %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_jobtip_path(@jobtip) %> |
+<%= link_to 'Back', jobtips_path %>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :jobtips
   mount Ckeditor::Engine => '/ckeditor'
   resources :talents
   resources :companies

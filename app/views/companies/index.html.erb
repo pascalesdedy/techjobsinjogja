@@ -31,6 +31,21 @@
   </tbody>
 </table>
 
+<div class="row">
+<div class="col s12 m8">    
+
+<% @companies.each do |company| %>
+     <div class="card z-depth-1 hoverable ">
+      <h4 class="center-align"><%= link_to company.title,company %></h4>
+      <div class="card-content"><%= company.description %></div>
+        <%= link_to 'Edit', edit_company_path(company) %>
+      <%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <%= link_to 'New Company', new_company_path %>
+   </div>
+<% end %>
+</div>
+
+
 <br>
 </div>
 <%= link_to 'New Company', new_company_path %>
